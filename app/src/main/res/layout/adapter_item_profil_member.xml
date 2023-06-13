@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_profil"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/text_kelas_profil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="NAMA_KELAS"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinse_extrabold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_depo_sisa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="depo sisa"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_kelas_profil"
+        />
+
+    <TextView
+        android:id="@+id/text_masa_berlaku"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="masa berlaku"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@id/text_depo_sisa"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

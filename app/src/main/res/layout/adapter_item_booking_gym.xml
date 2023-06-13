@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_book_gym"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutrvbookgym"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_kode_gym"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="KODE_BOOKING"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/poppinse_extrabold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_tanggal_gym"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Tanggal booking kelas"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_kode_gym" />
+
+        <TextView
+            android:id="@+id/text_tanggal_melakukan_gym"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Tanggal melakukan booking"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintTop_toBottomOf="@id/text_tanggal_gym" />
+
+        <TextView
+            android:id="@+id/text_slot_waktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Slot Waktu"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintTop_toBottomOf="@id/text_tanggal_melakukan_gym" />
+
+        <TextView
+            android:id="@+id/text_status_konfirmasi_gym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="status konfirmasi - Waktu Konfirmasi"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_slot_waktu"
+            app:layout_constraintTop_toBottomOf="@id/text_tanggal_melakukan_gym" />
+
+        <ImageButton
+            android:id="@+id/icon_delete_gym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:padding="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="#ff0000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

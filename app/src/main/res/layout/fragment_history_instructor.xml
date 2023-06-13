@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.profile.HistoryInstructorFragment">
+
+    <TextView
+        android:id="@+id/textscheduleinstructorpresence"
+        android:fontFamily="@font/poppinse_extrabold"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Mengajar Instruktur "
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_bulan"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textscheduleinstructorpresence"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_bulan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bulan"
+        android:hint="Bulan"
+        tools:ignore="MissingConstraints"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxStrokeColor="@color/blue">
+
+        <AutoCompleteTextView
+            android:id="@+id/ed_bulan"
+            android:layout_width="150dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:textSize="10dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_tahun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bulan"
+        app:layout_constraintStart_toEndOf="@id/layout_bulan"
+        android:hint="Tahun"
+        tools:ignore="MissingConstraints"
+        app:boxStrokeWidthFocused="1dp"
+        app:boxStrokeColor="@color/blue">
+
+        <AutoCompleteTextView
+            android:id="@+id/ed_tahun"
+            android:layout_width="150dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintStart_toEndOf="@id/layout_tahun"
+        app:layout_constraintTop_toBottomOf="@id/tv_bulan"/>
+
+    <TextView
+        android:id="@+id/text_bulan_tahun"
+        android:fontFamily="@font/poppinse_extrabold"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bulan - Tahun"
+        app:layout_constraintTop_toBottomOf="@id/layout_bulan"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sr_schedule_instructor_presence"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_bulan_tahun">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_schedule_instructor_presence"
+            android:layout_width="411dp"
+            android:layout_height="392dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textpermission"
+            tools:ignore="MissingConstraints"
+            tools:listitem="@layout/adapter_item_instructor_schedule_presensi" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <include
+        android:id="@+id/layout_loading"
+        layout = "@layout/layout_loading"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

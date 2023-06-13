@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_class"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:clickable="true"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="1dp"
+    app:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutrvbooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_kelas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="NAMA_KELAS"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/poppinse_extrabold"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/text_instruktur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Nama Instruktur"
+
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_kelas" />
+
+        <TextView
+            android:id="@+id/text_keterangan_kelas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Keterangan Jadwal"
+
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_instruktur" />
+
+        <TextView
+            android:id="@+id/text_tarif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Tarif kelas"
+
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_keterangan_kelas" />
+
+        <TextView
+            android:id="@+id/tv_hari"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Hari Jadwal"
+            android:fontFamily="@font/poppinse_extrabold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_tarif" />
+
+        <TextView
+            android:id="@+id/text_tanggal_kelas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinse_extrabold"
+            tools:text="Tanggal terlaksana kelas"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_tarif" />
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/icon_delete"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:padding="10dp"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

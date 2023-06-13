@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.home.FragmentHome">
+    <include
+        android:id="@+id/layout_loading"
+        layout = "@layout/layout_loading"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutrvbooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/color_gradient"
+        android:padding="16dp"
+        android:translationZ="0dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-2dp">
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="194dp"
+            android:layout_height="42dp"
+            android:fontFamily="@font/poppinse_extrabold"
+            android:text="hallo, user"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/ImageLogo"
+            android:layout_width="233dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toEndOf="@id/textHome"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="7dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:fontFamily="@font/poppinse_extrabold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat datang di GOFIT"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="33sp"
+        app:layout_constraintTop_toBottomOf="@id/layoutrvbooking"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="157dp" />
+
+    <TextView
+        android:id="@+id/textAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="jl. Centralpark No.10 Yogyakarta"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="157dp" />
+
+    <TextView
+        android:id="@+id/textInformasi"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+            "Aplikasi GOFIT adalah aplikasi yang memudahkan pengguna untuk memesan dan mengatur jadwal latihan di pusat kebugaran atau gym. Aplikasi ini bertujuan untuk memberikan kenyamanan dan kemudahan bagi para pengguna untuk mengakses layanan kelas dengan lebih efisien."
+        android:textColor="@color/black"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="12sp"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textWelcome"
+        tools:layout_editor_absoluteX="157dp" />
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/sr_class"-->
+<!--        android:layout_width="384dp"-->
+<!--        android:layout_height="1000dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:translationZ="-1dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.592"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textInformasi">-->
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_class_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@color/blue"
+        android:scrollbars="none"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/textInformasi"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/adapter_item_schedule" />
+
+    <ImageView
+        android:id="@+id/ImageLogoo"
+        android:layout_width="299dp"
+        android:layout_height="74dp"
+        android:src="@drawable/logoremovebg"
+        app:layout_constraintTop_toBottomOf="@id/list_class_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

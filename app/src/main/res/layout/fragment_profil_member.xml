@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.profile.ProfilMemberFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationY="-25dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutrvbooking3"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:translationZ="1dp"
+            android:background="@drawable/color_gradient"
+            android:padding="16dp">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_title"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardElevation="7dp"
+        app:cardCornerRadius="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:foregroundGravity = "center"
+        android:layout_centerInParent = "true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutrvbooking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_gradient">
+
+            <ImageView
+                android:id="@+id/quizimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profil2"
+                tools:layout_editor_absoluteX="49dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        android:clickable="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_title"
+        app:strokeWidth="2dp"
+        app:strokeColor="#1E5F74">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutrvbooking2"
+            android:layout_width="match_parent"
+            android:padding="20dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textNamaMember"
+                android:fontFamily="@font/gotham_black"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Member"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/input_nama_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="lorem ipsum"
+                android:textColor="@color/black"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textNamaMember" />
+
+            <TextView
+                android:id="@+id/textmasaaktivasi"
+                android:fontFamily="@font/gotham_black"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masa Aktivasi"
+                android:layout_marginTop="10dp"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_nama_member" />
+            <TextView
+                android:id="@+id/input_masa_aktivasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="lorem ipsum"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textmasaaktivasi" />
+            <TextView
+                android:id="@+id/textsisauang"
+                android:fontFamily="@font/gotham_black"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sisa Deposit Uang"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_masa_aktivasi" />
+            <TextView
+                android:id="@+id/input_sisa_deposit_uang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="lorem ipsum"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textsisauang" />
+
+            <TextView
+                android:id="@+id/text_sisa_paket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_black"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:text="Sisa Deposit Paket"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_sisa_deposit_uang" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/sr_profil"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_sisa_paket">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_profil"
+                    android:layout_width="411dp"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="10dp"
+                    android:scrollbarSize="5dp"
+                    android:scrollbarThumbHorizontal="@color/blue"
+                    android:scrollbars="horizontal"
+                    tools:ignore="MissingConstraints"
+                    tools:listitem="@layout/adapter_item_profil_member" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/ImageLogoo"
+        android:layout_width="299dp"
+        android:layout_height="74dp"
+        android:src="@drawable/logoremovebg"
+        app:layout_constraintTop_toBottomOf="@id/card_view_member"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <include
+        android:id="@+id/layout_loading"
+        layout = "@layout/layout_loading"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
